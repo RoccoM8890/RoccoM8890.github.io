@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <script src='javascripts/vendor/jquery.js'></script>
+    <script src='javascripts/vendor/jquery-ui.js'></script>
+    <script src='javascripts/vendor/jquery.ui.mouse.touch.js'></script>
+    <script src='javascripts/vendor/jquery.ui.touch-punch.min.js'></script>
+    <script src='javascripts/vendor/doubletouch.js'></script>
+    <script src='javascripts/sprite_loader.js'></script>
+
+    <link href='css/reset.css' rel='stylesheet' type='text/css' />
+    <link href='fonts.css' rel='stylesheet' type='text/css' />
+    <link href='hopscotch.css' rel='stylesheet' type='text/css' />
+    <link href='css/command_library.css' rel='stylesheet' type='text/css' />
+    <link href='css/command_area.css' rel='stylesheet' type='text/css' />
+    <link href='css/tutorial.css' rel='stylesheet' type='text/css' />
+    <link href='menu.css' rel='stylesheet' type='text/css' />
+    <link href='css/vendor/jquery-ui.css' rel='stylesheet' type='text/css' />
+    <title>Hopscotch</title>
+    <script type="text/javascript">
+      window.localStorage.setItem("current-step", 0);
+      window.localStorage.setItem("mac-app", false);
+
+      function onBodyLoad()
+      {
+        document.addEventListener("deviceready", onDeviceReady, false);
+      }
+
+      function onDeviceReady()
+      {
+        $('head meta[name=viewport]').remove();
+        $('head').prepend('<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />');
+
+
+      }
+      window.setIsMacApp = function setMacApp() {
+        window.localStorage.setItem("mac-app", true);
+      }
+    </script>
+  </head>
+  <body class='menu'>
+    <a id='freeplay' href='freeplay.html'>Freeplay Mode</a>
+    <a id='challenge' href='tutorial.html'>Challenge Mode</a>
+  </body>
+</html>
+
